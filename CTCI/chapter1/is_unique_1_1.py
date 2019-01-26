@@ -5,6 +5,8 @@ characters. What if you cannot use additional data structures?
 
 """
 
+# O(N)
+
 
 def unique(given_string):
 
