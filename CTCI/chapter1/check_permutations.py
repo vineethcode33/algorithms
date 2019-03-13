@@ -1,8 +1,12 @@
 # Given two strings, write a method to decide if one is a permutation of the other.
 from collections import Counter
+import unittest
 
 
 def check_permutation(string1, string2):
+
+    if len(string1) != len(string2):
+        return False
     string1_counter = Counter(string1)
     string2_counter = Counter(string2)
     for each_charecter in string1_counter:
@@ -11,6 +15,13 @@ def check_permutation(string1, string2):
     return True
 
 
-if __name__ == "__main__":
-    print(check_permutation("sample", "ample"))
-    print(check_permutation("act", "tac"))
+class Test(unittest.TestCase):
+
+    def test_check_permutaiton(self):
+        self.assertTrue(check_permutation("jack", "kjca"))
+        self.assertTrue(check_permutation("324561", "356124"))
+        self.assertFalse(check_permutation("test string", "sample test"))
+        self.assertFalse(check_permutation("ac", "tac"))
+
+
+unittest.main()
