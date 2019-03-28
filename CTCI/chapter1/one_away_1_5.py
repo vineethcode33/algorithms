@@ -64,6 +64,7 @@ class Test(unittest.TestCase):
 
     def test_one_away(self):
         self.assertTrue(one_away("pales", "bales"))
+        self.assertTrue(one_away("pal", "bal"))
         self.assertTrue(one_away("pales", "pale"))
         self.assertFalse(one_away("pales", "bale"))
 
