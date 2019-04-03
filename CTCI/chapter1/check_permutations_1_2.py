@@ -19,6 +19,7 @@ class Test(unittest.TestCase):
 
     def test_check_permutaiton(self):
         self.assertTrue(check_permutation("jack", "kjca"))
+        self.assertTrue(check_permutation("alex", "lexa"))
         self.assertTrue(check_permutation("324561", "356124"))
         self.assertFalse(check_permutation("test string", "sample test"))
         self.assertFalse(check_permutation("ac", "tac"))

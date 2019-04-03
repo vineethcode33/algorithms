@@ -15,6 +15,7 @@ def string_compression(input_string):
 
     comp_count = 1
     comp_string = ""
+
     for _index, _value in enumerate(input_string):
         if (_index == 0):
             comp_count = 1
